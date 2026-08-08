@@ -1,0 +1,44 @@
+{
+	"name": "rollup-plugin-eula",
+	"version": "2.0.0",
+	"description": "Stamps the copyright years into a license template and writes it into the build output",
+	"main": "./lib/index.cjs",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/proctorio/rollup-plugin-eula.git"
+	},
+	"scripts": {
+		"build-windows": "node build.mjs",
+		"build-linux": "node build.mjs",
+		"test": "vitest run",
+		"coverage": "vitest run --coverage",
+		"lint": "eslint --fix --ext .js src/ test/",
+		"build": "node build.mjs"
+	},
+	"type": "module",
+	"author": "Proctorio",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/proctorio/rollup-plugin-eula/issues"
+	},
+	"homepage": "https://github.com/proctorio/rollup-plugin-eula#readme",
+	"eslintConfig": {
+		"extends": "@proctorio/eslint-config"
+	},
+	"devDependencies": {
+		"@proctorio/eslint-config": "2.5.*",
+		"@vitest/coverage-v8": "3.2.6",
+		"vitest": "3.2.6",
+		"esbuild": "0.25.*"
+	},
+	"module": "./lib/index.js",
+	"exports": {
+		".": {
+			"import": "./lib/index.js",
+			"require": "./lib/index.cjs"
+		}
+	},
+	"files": [
+		"lib"
+	]
+}

@@ -1,0 +1,6 @@
+/.test_output
+/.vscode
+src/
+test/
+node_modules/
+package-lock.jsonbuild.mjs
